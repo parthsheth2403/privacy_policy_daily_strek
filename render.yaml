@@ -1,0 +1,6 @@
+services:
+  - type: static_site
+    name: daily-streak-privacy
+    env: static
+    buildCommand: ""
+    publishPath: site
