@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Daily Streak Habit Tracker</title>
+    <meta
+      name="description"
+      content="Official website for Daily Streak Habit Tracker with policy and app advertising information."
+    />
+    <style>
+      :root {
+        --bg: #f8efe6;
+        --panel: rgba(255, 251, 247, 0.92);
+        --panel-border: rgba(122, 63, 36, 0.1);
+        --text: #241611;
+        --muted: #6b4d40;
+        --accent: #d95b2d;
+        --accent-deep: #8d301c;
+        --shadow: 0 24px 60px rgba(95, 44, 21, 0.14);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          sans-serif;
+        color: var(--text);
+        background:
+          radial-gradient(circle at top left, rgba(255, 224, 194, 0.96), transparent 26%),
+          linear-gradient(135deg, #f4bd88 0%, #ea7945 52%, #c94f3e 100%);
+        min-height: 100vh;
+      }
+
+      .wrap {
+        width: min(1040px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: 40px 0 64px;
+      }
+
+      .hero {
+        padding: 24px 8px 28px;
+      }
+
+      .eyebrow {
+        display: inline-block;
+        padding: 8px 14px;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.2);
+        color: #fff9f5;
+        font-size: 0.9rem;
+        font-weight: 700;
+        letter-spacing: 0.03em;
+      }
+
+      h1 {
+        margin: 18px 0 12px;
+        font-size: clamp(2.6rem, 6vw, 4.8rem);
+        line-height: 0.95;
+        color: #fffdfb;
+        max-width: 720px;
+      }
+
+      .lead {
+        max-width: 680px;
+        margin: 0;
+        color: rgba(255, 248, 242, 0.92);
+        font-size: 1.08rem;
+        line-height: 1.7;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: 20px;
+      }
+
+      .card {
+        background: var(--panel);
+        backdrop-filter: blur(10px);
+        border: 1px solid var(--panel-border);
+        border-radius: 28px;
+        box-shadow: var(--shadow);
+        padding: 30px;
+      }
+
+      .kicker {
+        margin: 0 0 8px;
+        color: var(--accent-deep);
+        font-size: 0.82rem;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      h2 {
+        margin: 0 0 12px;
+        font-size: 1.5rem;
+        color: var(--text);
+      }
+
+      p,
+      li {
+        margin: 0;
+        color: var(--muted);
+        line-height: 1.72;
+        font-size: 1rem;
+      }
+
+      ul {
+        margin: 16px 0 0 20px;
+        padding: 0;
+      }
+
+      li + li {
+        margin-top: 10px;
+      }
+
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 22px;
+      }
+
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 46px;
+        padding: 0 18px;
+        border-radius: 999px;
+        text-decoration: none;
+        font-weight: 700;
+      }
+
+      .button-primary {
+        background: var(--accent);
+        color: #fffaf6;
+      }
+
+      .button-secondary {
+        background: #fff3e8;
+        color: var(--accent-deep);
+      }
+
+      .stat {
+        padding: 16px 0;
+        border-top: 1px solid rgba(141, 48, 28, 0.12);
+      }
+
+      .stat:first-of-type {
+        border-top: 0;
+        padding-top: 0;
+      }
+
+      .stat-label {
+        color: var(--accent-deep);
+        font-size: 0.85rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+      }
+
+      .stat-value {
+        margin-top: 6px;
+        color: var(--text);
+        font-size: 1.05rem;
+        line-height: 1.6;
+      }
+
+      .footer {
+        margin-top: 20px;
+        padding: 0 8px;
+        color: rgba(255, 248, 242, 0.86);
+        font-size: 0.96rem;
+      }
+
+      a {
+        color: inherit;
+      }
+
+      @media (max-width: 780px) {
+        .wrap {
+          width: min(100% - 20px, 1040px);
+          padding-top: 22px;
+          padding-bottom: 28px;
+        }
+
+        .grid {
+          grid-template-columns: 1fr;
+        }
+
+        .card {
+          padding: 22px;
+        }
+
+        h1 {
+          font-size: 2.8rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="wrap">
+      <section class="hero">
+        <span class="eyebrow">Official App Website</span>
+        <h1>Daily habit tracking designed to keep momentum going.</h1>
+        <p class="lead">
+          Daily Streak Habit Tracker helps users build consistency with simple
+          check-ins, streak history, reminders, and progress visibility in one
+          focused experience.
+        </p>
+      </section>
+
+      <section class="grid">
+        <article class="card">
+          <p class="kicker">About The App</p>
+          <h2>Built for reliable daily follow-through</h2>
+          <p>
+            Daily Streak Habit Tracker is a lightweight habit-building app for
+            people who want a clear daily routine, visible progress, and fewer
+            distractions. The experience is centered on fast completion, streak
+            continuity, and practical motivation.
+          </p>
+          <ul>
+            <li>Track daily habits with a clean streak-focused workflow</li>
+            <li>Review progress through calendar and statistics views</li>
+            <li>Use reminders to stay accountable and consistent</li>
+            <li>Access policy and advertising details from one official source</li>
+          </ul>
+          <div class="actions">
+            <a class="button button-primary" href="/privacy-policy/">View Privacy Policy</a>
+            <a class="button button-secondary" href="/app-ads.txt">Open app-ads.txt</a>
+          </div>
+        </article>
+
+        <aside class="card">
+          <p class="kicker">Information</p>
+          <h2>Public app resources</h2>
+
+          <div class="stat">
+            <div class="stat-label">Privacy Policy</div>
+            <div class="stat-value">
+              <a href="/privacy-policy/">Read the privacy policy for Daily Streak Habit Tracker</a>
+            </div>
+          </div>
+
+          <div class="stat">
+            <div class="stat-label">Advertising</div>
+            <div class="stat-value">
+              <a href="/app-ads.txt">View the app-ads.txt authorization file</a>
+            </div>
+          </div>
+
+          <div class="stat">
+            <div class="stat-label">Developer Contact</div>
+            <div class="stat-value">parthsandeepsheth@gmail.com</div>
+          </div>
+        </aside>
+      </section>
+
+      <p class="footer">
+        This website is maintained as the official public web presence for
+        Daily Streak Habit Tracker.
+      </p>
+    </main>
+  </body>
+</html>
